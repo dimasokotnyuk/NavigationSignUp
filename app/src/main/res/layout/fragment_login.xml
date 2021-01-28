@@ -7,31 +7,29 @@
     android:orientation="vertical"
     android:padding="16dp">
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="16dp" />
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="150dp"
-        android:layout_gravity="center"
         android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
         app:srcCompat="@drawable/liverpool" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="32dp"
         android:text="Добро пожаловать,"
         android:textColor="@color/black"
-        android:layout_gravity="center"
         android:textSize="24sp"
         android:textStyle="bold" />
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_gravity="center"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="4dp"
         android:text="войдите, чтобы продолжить"
         android:textColor="@android:color/darker_gray"
@@ -43,88 +41,70 @@
         android:layout_height="0dp"
         android:layout_weight="1" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Эл. адрес"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputEditText
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-4dp"
-        android:layout_marginRight="-4dp"
-        android:inputType="textEmailAddress"
-        android:maxLength="50"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:textColor="@android:color/darker_gray" />
+        android:hint="Email">
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="24dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Пароль"
-        android:textColor="@color/black"
-        android:textSize="12sp"
-        android:textStyle="bold" />
-
-    <com.google.android.material.textfield.TextInputEditText
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="-4dp"
-        android:layout_marginRight="-4dp"
-        android:inputType="textPassword"
-        android:maxLength="50"
-        android:maxLines="1"
-        android:singleLine="true"
-        android:textColor="@android:color/darker_gray" />
+        android:layout_marginTop="4dp"
+        android:hint="Password">
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="8dp" />
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:maxLength="50"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:textColor="@android:color/darker_gray" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
+        android:layout_marginTop="8dp"
         android:text="Забыли пароль?"
         android:textColor="@android:color/darker_gray"
         android:textSize="16sp"
         android:textStyle="bold" />
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="8dp"/>
-
     <com.google.android.material.button.MaterialButton
+        android:id="@+id/bLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="-4dp"
+        android:layout_marginTop="8dp"
         android:text="Войти"
         app:backgroundTint="@android:color/holo_red_light"
         app:cornerRadius="8dp" />
 
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="4dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:id="@+id/tvStartRegistration"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="4dp"
-            android:layout_gravity="center"
-            android:textStyle="bold"
-            android:textSize="16sp"
-            android:textColor="@android:color/holo_red_light"
-            android:text="Пройти регистрацию"/>
-    <Space
-        android:layout_width="0dp"
-        android:layout_height="36dp"/>
+    <TextView
+        android:id="@+id/tvStartRegistration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="36dp"
+        android:text="Пройти регистрацию"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
 
 </LinearLayout>

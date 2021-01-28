@@ -6,7 +6,7 @@
     app:startDestination="@id/fragmentLogIn">
     <fragment
         android:id="@+id/fragmentLogIn"
-        android:name="com.example.navigationsignup.fragments.FragmentLogIn"
+        android:name="com.example.navigationsignup.feautre.auth.signin.LogInFragment"
         tools:layout="@layout/fragment_login"
         android:label="FragmentLogIn" >
         <action
