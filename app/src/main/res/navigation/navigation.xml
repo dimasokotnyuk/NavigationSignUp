@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/fragmentLogIn">
+    <fragment
+        android:id="@+id/fragmentLogIn"
+        android:name="com.example.navigationsignup.fragments.FragmentLogIn"
+        tools:layout="@layout/fragment_login"
+        android:label="FragmentLogIn" >
+        <action
+            android:id="@+id/action_fragmentLogIn_to_fragmentSignNickname"
+            app:destination="@id/fragmentSignUpNickname" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignUpEmail"
+        android:name="com.example.navigationsignup.fragments.FragmentSignUpEmail"
+        android:label="FragmentSignUpEmail"
+        tools:layout="@layout/fragment_sign_up_email">
+        <action
+            android:id="@+id/action_fragmentSignUpEmail_to_fragmentSignUpPassword"
+            app:destination="@id/fragmentSignUpPassword" />
+        <argument
+            android:name="Nickname"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignUpNickname"
+        android:name="com.example.navigationsignup.fragments.FragmentSignUpNickname"
+        android:label="FragmentSignUpNickname"
+        tools:layout="@layout/fragment_sign_up_nickname">
+        <action
+            android:id="@+id/action_fragmentSignNickname_to_fragmentSignUpEmail"
+            app:destination="@id/fragmentSignUpEmail" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSignUpPassword"
+        tools:layout="@layout/fragment_sign_up_password"
+        android:name="com.example.navigationsignup.fragments.FragmentSignUpPassword"
+        android:label="FragmentSignUpPassword" >
+        <action
+            android:id="@+id/action_fragmentSignPassword_to_fragmentInfo"
+            app:destination="@id/fragmentInfo" />
+        <argument
+            android:name="Nickname"
+            app:argType="string" />
+        <argument
+            android:name="Email"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentInfo"
+        tools:layout="@layout/fragment_info"
+        android:name="com.example.navigationsignup.fragments.FragmentInfo"
+        android:label="FragmentInfo" >
+        <argument
+            android:name="Nickname"
+            app:argType="string" />
+        <argument
+            android:name="Email"
+            app:argType="string" />
+        <argument
+            android:name="Password"
+            app:argType="string" />
+    </fragment>
+</navigation>
